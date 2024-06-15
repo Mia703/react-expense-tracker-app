@@ -1,9 +1,15 @@
-
 /* =================== base page styles =================== */
 
 /* =================== font styles =================== */
 
 /* =================== constants =================== */
+
+/* ---------- body container ---------- */
+.body.container>.container {
+	margin: 1rem 0;
+}
+
+/* ---------- header container ---------- */
 .header.container {
 	margin-bottom: 1rem;
 }
@@ -12,7 +18,24 @@
 	font-weight: 600;
 }
 
-.body.container > .container {
-	margin: 1rem 0;
+/* ---------- expenses container ---------- */
+.needs.container h3,
+.wants.container h3 {
+	font-weight: 600;
+	margin: 1.5rem 0;
+	text-transform: uppercase;
 }
+
+.totals.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	padding: 0;
+	margin-bottom: 1rem;
+}
+
+.budgets.container {
+	padding: 0 0;
+}
+
 /* =================== media queries =================== */

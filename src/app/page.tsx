@@ -1,8 +1,9 @@
-import './style.css';
+import "./style.css";
 import BalanceCard from "./components/home/balanceCard";
 import SalaryCard from "./components/home/salaryCard";
 import Divider from "./components/home/divider";
-import TotalCard from "./components/home/total-card/totalCard";
+import TotalCard from "./components/home/totalCard";
+import BudgetCard from "./components/home/budgetCard";
 
 export default function Home() {
 	// get today's date
@@ -73,18 +74,32 @@ export default function Home() {
 					<div className="needs container">
 						<h3>Needs</h3>
 						<div className="totals container">
-							<TotalCard title={"Total Actual Expenses"} number={-41} />
-							<TotalCard title={"Total Budgeted Expenses"} number={-41} />
+							<TotalCard title={"Total Actual Expenses"} number={"-41"} />
+							<TotalCard title={"Total Budgeted Expenses"} number={"78"} />
 						</div>
-						<div className="budgets container"></div>
+						<div className="budgets container">
+							<BudgetCard
+								title={"Groceries"}
+								description={"lorem ipsum"}
+								budgeted_amount={"100"}
+								spent_amount={"80"}
+							/>
+						</div>
 					</div>
 					<div className="wants container">
 						<h3>Wants</h3>
 						<div className="totals container">
-							<TotalCard title={"Total Actual Expenses"} number={-41} />
-							<TotalCard title={"Total Budgeted Expenses"} number={-41} />
+							<TotalCard title={"Total Actual Expenses"} number={"-41"} />
+							<TotalCard title={"Total Budgeted Expenses"} number={"49"} />
 						</div>
-						<div className="budgets container"></div>
+						<div className="budgets container">
+							<BudgetCard
+								title={"Amazon"}
+								description={"nail polish, tip-x nails"}
+								budgeted_amount={"50"}
+								spent_amount={"14"}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
