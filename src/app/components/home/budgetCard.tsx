@@ -68,7 +68,7 @@ export default function budgetCard({
 					className="w-full border-[var(--primary-black)] hover:bg-[var(--primary-black)] hover:text-white"
 					style={edit_button}
 				>
-					<Link href="/expense-tracker/edit-budget">Edit Budget</Link>
+					<Link href={"/expense-tracker/edit-budget"}>Edit Budget</Link>
 				</Button>
 			</CardHeader>
 		</Card>
