@@ -4,6 +4,7 @@ import SalaryCard from "./components/home/salaryCard";
 import Divider from "./components/home/divider";
 import TotalCard from "./components/home/totalCard";
 import BudgetCard from "./components/home/budgetCard";
+import Link from "next/link";
 
 export default function Home() {
 	// get today's date
@@ -56,6 +57,7 @@ export default function Home() {
 		<main id="homepage">
 			<div className="navigation mobile"></div>
 			<div className="navigation desktop"></div>
+
 			<div className="body container">
 				<div className="header container">
 					<p id="header">Good morning</p>
@@ -63,37 +65,71 @@ export default function Home() {
 						Today is {date}, {time}.
 					</p>
 				</div>
-				<div className="balance container">
+				<div className="summery container">
 					<BalanceCard />
-				</div>
-				<div className="salary container">
 					<SalaryCard />
 				</div>
+				<div className="savings container">
+					<div className="savings header">
+						<Divider title={"Savings"} />
+					</div>
+					<div className="summary container">
+						<TotalCard title={"Total Actual Savings"} number={"88"} />
+						<TotalCard title={"Total Budgeted Savings"} number={"150"} />
+					</div>
+					<div className="budget container">
+						<BudgetCard
+							type={"savings"}
+							title={"Ana Luisa"}
+							description={"Jewellery"}
+							budgeted_amount={"100"}
+							spent_amount={"78"}
+						/>
+						<BudgetCard
+							type={"savings"}
+							title={"H&M"}
+							description={"Summer tops and pants. Maybe dresses."}
+							budgeted_amount={"50"}
+							spent_amount={"10"}
+						/>
+					</div>
+				</div>
 				<div className="expenses container">
-					<Divider title={"Expenses"} />
+					<div className="expenses header col-span-2">
+						<Divider title={"Expenses"} />
+					</div>
 					<div className="needs container">
-						<h3>Needs</h3>
-						<div className="totals container">
-							<TotalCard title={"Total Actual Expenses"} number={"-41"} />
-							<TotalCard title={"Total Budgeted Expenses"} number={"78"} />
+						<h3 className="font-semibold my-4">Needs</h3>
+						<div className="totals container grid grid-cols-2 gap-4 mb-4">
+							<TotalCard title={"Total Actual Expenses"} number={"-130"} />
+							<TotalCard title={"Total Budgeted Expenses"} number={"150"} />
 						</div>
 						<div className="budgets container">
 							<BudgetCard
+								type={"expenses"}
 								title={"Groceries"}
 								description={"lorem ipsum"}
 								budgeted_amount={"100"}
 								spent_amount={"80"}
 							/>
+							<BudgetCard
+								type={"expenses"}
+								title={"Laundry"}
+								description={"lorem ipsum"}
+								budgeted_amount={"50"}
+								spent_amount={"50"}
+							/>
 						</div>
 					</div>
 					<div className="wants container">
-						<h3>Wants</h3>
-						<div className="totals container">
-							<TotalCard title={"Total Actual Expenses"} number={"-41"} />
-							<TotalCard title={"Total Budgeted Expenses"} number={"49"} />
+						<h3 className="font-semibold my-4">Wants</h3>
+						<div className="totals container grid grid-cols-2 gap-4 mb-4">
+							<TotalCard title={"Total Actual Expenses"} number={"-14"} />
+							<TotalCard title={"Total Budgeted Expenses"} number={"50"} />
 						</div>
 						<div className="budgets container">
 							<BudgetCard
+								type={"expenses"}
 								title={"Amazon"}
 								description={"nail polish, tip-x nails"}
 								budgeted_amount={"50"}

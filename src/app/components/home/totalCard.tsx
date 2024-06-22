@@ -1,8 +1,6 @@
 import {
 	Card,
-	CardContent,
 	CardDescription,
-	CardFooter,
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
@@ -22,21 +20,13 @@ export default function totalCard({ title, number }: total_card_properties) {
 		return `$${num.toFixed(2)}`;
 	}
 
-	// -------- component styles --------
-	const card_header = {
-		textAlign: "center" as "center",
-	};
-
-	const card_description = {
-		fontSize: "0.8em",
-		marginBottom: "0.5rem",
-	};
-
 	return (
-		<Card>
-			<CardHeader style={card_header}>
-				<CardDescription style={card_description}>{title}</CardDescription>
-				<CardTitle>{isNegative(Number(number))}</CardTitle>
+		<Card className="mb-4">
+			<CardHeader className="text-center">
+				<CardDescription className="text-sm mb-2">{title}</CardDescription>
+				<CardTitle className="text-xl sm:text-2xl">
+					{isNegative(Number(number))}
+				</CardTitle>
 			</CardHeader>
 		</Card>
 	);
