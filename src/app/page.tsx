@@ -53,6 +53,23 @@ export default function Home() {
 		return `${formattedHours}:${formattedMinutes} ${period}`;
 	}
 
+	// formats day of time response
+	function formatResponse() {
+		const time = today.getHours();
+		// 1.00 AM - 8.00 AM
+		if (time < 9) {
+			return "Good morning";
+		}
+		// 9.00 AM - 5.00 PM
+		else if (time >= 9 && time <= 17) {
+			return "Good afternoon";
+		}
+		// 6.00 PM - midnight (12.00 AM)
+		else {
+			return "Good evening";
+		}
+	}
+
 	return (
 		<main id="homepage">
 			<div className="navigation mobile"></div>
@@ -60,7 +77,7 @@ export default function Home() {
 
 			<div className="body container">
 				<div className="header container">
-					<p id="header">Good morning</p>
+					<p id="header">{formatResponse()}</p>
 					<p id="date">
 						Today is {date}, {time}.
 					</p>

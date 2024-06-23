@@ -4,13 +4,16 @@ import Link from "next/link";
 
 export default function Page() {
 	return (
-		<section className="add-budget">
-			<div className="navigation back">
+		<section id="add-budget" className="p-4 mb-4">
+			<div className="navigation back mb-6">
 				<Button>
 					<Link href={"/"}>Back</Link>
 				</Button>
 			</div>
-			<div className="form container">
+			<div className="form container p-0">
+				<h3 className="uppercase text-center font-semibold mb-4">
+					Add Budget
+				</h3>
 				<BudgetForm type="add" />
 			</div>
 		</section>
