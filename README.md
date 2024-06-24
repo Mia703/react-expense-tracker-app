@@ -39,9 +39,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 How to define the data type of a parameter in Typescript: https://bobbyhadz.com/blog/typescript-binding-element-implicitly-has-an-any-type
 
-Project Name: My Pocket Palnner
+Project Name: Pocket Expense Planner
 
 Other NPM Commands:
 
 - npm run dev
 - npm run build
+
+https://docs-git-docs-compute-overview-supabase.vercel.app/docs/reference/javascript/auth-signinwithpassword

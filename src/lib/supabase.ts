@@ -34,3 +34,8 @@ export const supabase = createClient(
  * 
  * The best solution is to do an 'if' statement checking to ensure the value is not 'undefined'
  */
+
+/**
+ * Vercel Deployment Note
+ * Remember to add the environment variables to your project's settings -> environment variables -> key
+ */
