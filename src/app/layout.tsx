@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Pocket Expense Tracker",
+	title: "Expense Tracker",
 	description: "Tracks your expenses while you're on the go",
 };
 
@@ -13,8 +16,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
-				<div id="main-grid">{children}</div>
+			<body className={inter.className}>
+				<div
+					id="main-grid"
+					className="m-4 grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12"
+				>
+					{children}
+				</div>
 			</body>
 		</html>
 	);
