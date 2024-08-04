@@ -55,7 +55,7 @@ export default function NewSalaryForm() {
 	return (
 		<section
 			id="new-salary-form"
-			className="flex flex-col h-screen justify-between sm:col-span-4 md:col-span-6 lg:col-span-12"
+			className="p-4 min-h-screen flex flex-col justify-between col-span-4 md:col-start-2 md:col-end-6 lg:col-start-5 lg:col-end-9"
 		>
 			<div className="back-button group">
 				<Button
@@ -70,7 +70,7 @@ export default function NewSalaryForm() {
 					</Link>
 				</Button>
 			</div>
-			<div className="salary-form group">
+			<div className="salary-form group flex flex-col flex-grow justify-center">
 				<Card className="text-center p-4">
 					<CardContent>
 						<form action="" id="salary-form" onSubmit={formik.handleSubmit}>

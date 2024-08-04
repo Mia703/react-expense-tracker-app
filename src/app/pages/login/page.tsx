@@ -58,7 +58,7 @@ export default function LoginPage() {
 	return (
 		<section
 			id="login-page"
-			className="h-screen flex flex-col justify-between sm:col-span-4 md:col-span-6 lg:col-span-12"
+			className="p-4 min-h-screen flex flex-col justify-between col-span-4 md:col-start-2 md:col-end-6 lg:col-start-5 lg:col-end-9"
 		>
 			<div className="back button group">
 				<Button
@@ -73,7 +73,7 @@ export default function LoginPage() {
 					</Link>
 				</Button>
 			</div>
-			<div className="login-form group my-20 text-center">
+			<div className="login-form group text-center mb-20">
 				<Card>
 					<CardHeader>
 						<CardTitle className="capitalize">Login</CardTitle>

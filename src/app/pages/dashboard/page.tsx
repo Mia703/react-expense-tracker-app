@@ -67,7 +67,7 @@ export default function Dashboard() {
 	return (
 		<section
 			id="dashboard-page"
-			className="sm:col-span-4 md:col-span-6 lg:col-span-12"
+			className="p-4 col-span-4 md:col-start-2 md:col-end-6 lg:col-start-5 lg:col-end-9"
 		>
 			<div className="header group">
 				<h3>Hey, {currUser ? currUser.fname : "No Name"}</h3>
@@ -82,7 +82,9 @@ export default function Dashboard() {
 						</Button>
 					</CardHeader>
 					<CardContent className="text-center">
-						<CardTitle className="text-4xl">${salary? salary.toFixed(2) : 0.00}</CardTitle>
+						<CardTitle className="text-4xl">
+							${salary ? salary.toFixed(2) : 0.0}
+						</CardTitle>
 					</CardContent>
 					<CardFooter>
 						<div className="percentages group flex flex-row justify-between w-full text-gray-500">
@@ -105,7 +107,7 @@ export default function Dashboard() {
 				<div className="budgets group my-2 grid gap-2 md:grid-cols-1 lg:grid-cols-2">
 					<BudgetButton
 						budgetName="Budget"
-						totalSpent={780}
+						totalSpent={81.45}
 						totalBudgeted={750}
 					/>
 				</div>

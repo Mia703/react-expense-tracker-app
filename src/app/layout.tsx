@@ -19,7 +19,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<div
 					id="main-grid"
-					className="m-4 grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12"
+					className="grid gap-4 grid-span-4 md:grid-cols-6 lg:grid-cols-12"
 				>
 					{children}
 				</div>

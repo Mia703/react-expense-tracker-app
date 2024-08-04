@@ -5,9 +5,9 @@ export default function Home() {
 	return (
 		<main
 			id="home-page"
-			className="sm:col-span-4 md:col-span-6 lg:col-span-6"
+			className="p-4 min-h-screen col-span-4 flex flex-col justify-end md:col-start-2 md:col-end-6 lg:col-start-5 lg:col-end-9"
 		>
-			<div className="group h-screen flex flex-col justify-end pb-20">
+			<div className="group mb-20">
 				<div className="login group text-center">
 					<h3 className="capitalize">Expense Tracker</h3>
 					<p>Login or sign up to get started budgeting.</p>
