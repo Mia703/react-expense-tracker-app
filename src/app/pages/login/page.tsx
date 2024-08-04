@@ -21,7 +21,7 @@ export default function LoginPage() {
 	
 	async function login(email: string) {
 
-		const { error } = await supabase
+		const { data, error } = await supabase
 			.from("users")
 			.select("*")
 			.eq("email", email);
@@ -33,7 +33,7 @@ export default function LoginPage() {
 			);
 		} else {
 			console.log("logged in successfully");
-			// TODO: route to dashboard page
+			window.sessionStorage.setItem("user", JSON.stringify(data[0]));
 			router.push('/pages/dashboard');
 		}
 	}

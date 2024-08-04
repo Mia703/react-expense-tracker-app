@@ -38,3 +38,8 @@ Other NPM Commands:
 
 - npm run dev
 - npm run build
+
+## Project Notes
+
+- [How to use sessionStorage in React](https://contactmentor.com/session-storage-react-js/)
+- [sessionStorage Methods](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp)
